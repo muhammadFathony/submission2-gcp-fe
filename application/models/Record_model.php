@@ -8,7 +8,7 @@ class Record_model extends CI_Model {
     public function __construct() {
         $this->client = new Client([
             // TODO: Tambahkan Base URL API
-            'base_uri' => "base_url_backend_Anda",
+            'base_uri' => "https://backend-dot-angular-harmony-350705.et.r.appspot.com/",
         ]);
     }
 
@@ -59,7 +59,8 @@ class Record_model extends CI_Model {
         if ($_FILES['attachment']['tmp_name'] !== "") {
             $files = fopen($_FILES['attachment']['tmp_name'], 'r');
         }
-
+        $fdate = $this->input->post('date');
+        $date = str_replace('/', '-', $fdate);
         $response = $this->client->request('POST', '/insertrecord', [
             'multipart' => [
                 [
@@ -72,7 +73,7 @@ class Record_model extends CI_Model {
                 ],
                 [
                     'name' => 'date',
-                    'contents' => $this->input->post('date')
+                    'contents' => date('Y-m-d H:i:s', strtotime($date))
                 ],
                 [
                     'name' => 'notes',

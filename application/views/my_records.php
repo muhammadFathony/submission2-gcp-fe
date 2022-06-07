@@ -57,13 +57,13 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a href="/"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                        </li>
-                        <li class="active">
-                            <a href="records"><i class="fas fa-chart-bar"></i>Records</a>
+                            <a href="<?= site_url()?>"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="records/add"><i class="fas fa-plus-square"></i>Add Records</a>
+                            <a href="<?= site_url('records')?>"><i class="fas fa-chart-bar"></i>Records</a>
+                        </li>
+                        <li class="active">
+                            <a href="<?= site_url('records/add')?>"><i class="fas fa-plus-square"></i>Add Records</a>
                         </li>
                     </ul>
                 </div>
@@ -82,13 +82,13 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li>
-                            <a href="/"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                        </li>
-                        <li class="active">
-                            <a href="records"><i class="fas fa-chart-bar"></i>Records</a>
+                            <a href="<?= site_url()?>"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="records/add"><i class="fas fa-plus-square"></i>Add Records</a>
+                            <a href="<?= site_url('records')?>"><i class="fas fa-chart-bar"></i>Records</a>
+                        </li>
+                        <li class="active">
+                            <a href="<?= site_url('records/add')?>"><i class="fas fa-plus-square"></i>Add Records</a>
                         </li>
                     </ul>
                 </nav>

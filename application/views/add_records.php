@@ -57,13 +57,13 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a href="/"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <a href="<?= site_url()?>"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="../records"><i class="fas fa-chart-bar"></i>Records</a>
+                            <a href="<?= site_url('records')?>"><i class="fas fa-chart-bar"></i>Records</a>
                         </li>
                         <li class="active">
-                            <a href="../records/add"><i class="fas fa-plus-square"></i>Add Records</a>
+                            <a href="<?= site_url('records/add')?>"><i class="fas fa-plus-square"></i>Add Records</a>
                         </li>
                     </ul>
                 </div>
@@ -82,13 +82,13 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li>
-                            <a href="/"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <a href="<?= site_url()?>"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="../records"><i class="fas fa-chart-bar"></i>Records</a>
+                            <a href="<?= site_url('records')?>"><i class="fas fa-chart-bar"></i>Records</a>
                         </li>
                         <li class="active">
-                            <a href="../records/add"><i class="fas fa-plus-square"></i>Add Records</a>
+                            <a href="<?= site_url('records/add')?>"><i class="fas fa-plus-square"></i>Add Records</a>
                         </li>
                     </ul>
                 </nav>
@@ -126,7 +126,7 @@
                                                     <?php echo validation_errors(); ?>
                                                 </div>
                                             <?php endif; ?>
-                                            <?php echo form_open('../records/add', 'enctype="multipart/form-data" class="form-horizontal"'); ?>
+                                            <?php $url = base_url('records/add'); echo form_open($url, 'enctype="multipart/form-data" class="form-horizontal"'); ?>
                                             
                                                 <div class="form-group">
                                                     <label for="cc-payment" class="control-label mb-1">Amount*</label>
@@ -138,7 +138,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="date" class=" form-control-label">Date*</label>
-                                                    <input type="datetime-local" id="date" name="date" class="form-control">
+                                                    <input type="date" id="date" name="date" class="form-control">
                                                 </div>
                                                 <div class="row form-group">
                                                     <div class="col col-md-2">
