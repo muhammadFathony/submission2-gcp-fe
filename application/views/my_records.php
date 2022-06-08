@@ -140,7 +140,7 @@
                                             <tr>
                                                 <td><?php echo $record['name']; ?></td>
                                                 <td><?php echo $record['amount']; ?></td>
-                                                <td><?php echo $record['date']; ?></td>
+                                                <td><?php echo date('d-m-Y H:i:s', strtotime($record['date'])); ?></td>
                                                 <td><?php echo $record['notes']; ?></td>
                                                 <td><a href="<?php echo $record['attachment']; ?>"><?php echo $record['attachment']; ?></a></td>
                                                 <td><a href="records/edit/<?php echo $record['id']; ?>"><i class="fa fa-edit"></i></a></td>

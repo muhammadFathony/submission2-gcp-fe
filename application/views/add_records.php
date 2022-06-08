@@ -138,7 +138,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="date" class=" form-control-label">Date*</label>
-                                                    <input type="date" id="date" name="date" class="form-control">
+                                                    <input type="datetime-local" id="date" name="date" class="form-control">
                                                 </div>
                                                 <div class="row form-group">
                                                     <div class="col col-md-2">
